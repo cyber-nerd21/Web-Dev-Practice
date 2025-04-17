@@ -1,0 +1,97 @@
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f0f4ff, #ffffff);
+    text-align: center;
+    overflow: hidden;
+
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    min-height: 3.5rem; /* to avoid jump when text slides */
+    transition: all 0.3s ease;
+  }
+  
+  .highlight {
+    color: #FAD6A5; /* or any soft soothing color you choose */
+    font-weight: bold;
+    transition: all 0.3s ease;
+    animation: glowIn 1s ease-in-out;
+  }
+  
+  @keyframes glowIn {
+    0% {
+      text-shadow: 0 0 5px #FAD6A5;
+    }
+    50% {
+      text-shadow: 0 0 15px #FAD6A5, 0 0 30px #FAD6A5;
+    }
+    100% {
+      text-shadow: 0 0 5px #FAD6A5;
+    }
+  }
+  
+  
+  .subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 600px;
+    margin-bottom: 2rem;
+  }
+  
+  .cta {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    background-color: #FAD6A5;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .cta:hover {
+    box-shadow: 0 0 10px #FAD6A5, 0 0 20px #FAD6A5;
+  }
+  
+  @media (max-width: 600px) {
+    .title {
+      font-size: 2rem;
+    }
+  
+    .subtitle {
+        font-size: 1.2rem;
+        color: #FAD6A5;
+        transition: 0.3s ease;
+      }
+      
+      .subtitle:hover {
+        text-shadow: 0 0 10px #FAD6A5;
+      }
+      
+    .cta {
+      font-size: 0.9rem;
+      padding: 0.7rem 1.6rem;
+    }
+  }
+  .illustration {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 300px;
+    max-width: 40vw;
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: 0;
+  }
+  

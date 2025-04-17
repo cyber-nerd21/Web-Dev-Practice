@@ -1,0 +1,97 @@
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 1.2rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    animation: fadeInDown 0.7s ease forwards;
+  }
+  
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-15px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #FAD6A5;
+    font-family: 'Georgia', serif;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .logo:hover {
+    transform: scale(1.05);
+  }
+  
+  .navLinks {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+  
+  .navLinks li a {
+    text-decoration: none;
+    color: #FAD6A5;
+    font-weight: 500;
+    font-size: 1rem;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .navLinks li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -4px;
+    background: #FAD6A5;
+    transition: 0.4s ease;
+  }
+  
+  .navLinks li a:hover::after {
+    width: 100%;
+  }
+  
+  .navLinks li a:hover {
+    color: #FAD6A5;
+  }
+  
+  .cta {
+    padding: 0.6rem 1.3rem;
+    font-size: 0.9rem;
+    background-color: #FAD6A5;
+    color:#FAD6A5;
+    border: none;
+    border-radius: 999px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 3px 12px #FAD6A5(250, 214, 165, 0.4);
+  }
+  
+  .cta:hover {
+    background-color: #ffe1b3;
+    box-shadow: 0 0 15px #FAD6A5;
+  }
+  
+  @media (max-width: 768px) {
+    .navLinks {
+      display: none;
+    }
+  }
+  
